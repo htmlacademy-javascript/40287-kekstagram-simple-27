@@ -5,13 +5,14 @@ const getNumberArray = () => {
   return {
     id: countObject,
     url: `photos/${countObject}.jpg`,
-    description: "Фотка на память",
+    description: 'Фотка на память',
     comments: getRandomPositiveInteger(0, 200),
     likes: getRandomPositiveInteger(15, 200)
   };
 };
 
 const ObjectsArray = Array.from({ length: 25 }, getNumberArray);
+ObjectsArray();
 
 function getRandomPositiveInteger(a, b) {
   if (a < 0 || b < 0) {
