@@ -4,7 +4,7 @@ const getNumberArray = () => {
   countObject++;
   return {
     id: countObject,
-    url: photos/`${countObject}`.jpg,
+    url: `photos/${countObject}.jpg`,
     description: "Фотка на память",
     comments: getRandomPositiveInteger(0, 200),
     likes: getRandomPositiveInteger(15, 200)
