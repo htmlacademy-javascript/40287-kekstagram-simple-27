@@ -1,6 +1,6 @@
 import {hideElement, showElement} from './util.js';
 
-const effectList= document.querySelector('.effects__list');
+const effectList = document.querySelector('.effects__list');
 const effectSlider = document.querySelector('.effect-level__slider');
 const effectValue = document.querySelector('.effect-level__value');
 const effectField = document.querySelector('.img-upload__effect-level');
