@@ -1,11 +1,14 @@
 import { showErrorMessage, showSuccessMessage, reloadPage } from './util.js';
 
-const getData = async () => fetch('https://27.javascript.pages.academy/kekstagram-simple/data')
+const dataGetInfo = 'https://27.javascript.pages.academy/kekstagram-simple/data';
+const dataPostInfo = 'https://27.javascript.pages.academy/kekstagram-simple';
+
+const getData = async () => fetch(dataGetInfo)
   .then((response) => response.json())
   .catch(() => showErrorMessage('Ошибка при загрузке данных с сервера', reloadPage));
 
 const sendData = (body) => {
-  fetch('https://27.javascript.pages.academy/kekstagram-simple',
+  fetch(dataPostInfo,
     {
       method: 'POST',
       body
