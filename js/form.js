@@ -2,6 +2,8 @@ import { sendData } from './api.js';
 import { checkStringLength, blockSubmitButton, lockScroll, unlockScroll, resetElement, isEscapeKey, hideElement, showElement, unlockSubmitButton, enableElement, disableElement } from './util.js';
 
 
+const MIN_COMMENT_LENGTH = 20;
+const MAX_COMMENT_LENGTH = 140;
 const uploadInput = document.querySelector('#upload-file');
 const uploadModal = document.querySelector('.img-upload__overlay');
 const uploadCancel = uploadModal.querySelector('#upload-cancel');
@@ -74,9 +76,6 @@ scaleControlBigger.addEventListener('click', () => {
   enableElement(scaleControlSmaller);
   setImageScale();
 });
-
-const MIN_COMMENT_LENGTH = 20;
-const MAX_COMMENT_LENGTH = 140;
 
 const pristine = new Pristine(uploadForm, {
   classTo: 'img-upload__text',
